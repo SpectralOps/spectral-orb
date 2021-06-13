@@ -1,0 +1,11 @@
+version: 2.1
+
+description: >
+  Easily integrate Spectral into your CircleCI projects.
+  Use Spectral to detect hardcoded credentials, secrets, API tokens and misconfiguration.
+display:
+  home_url: "https://spectralops.io"
+  source_url: "https://github.com/SpectralOps/spectral-orb"
+
+orbs:
+  preflight: spectralops/preflight@2.0.0

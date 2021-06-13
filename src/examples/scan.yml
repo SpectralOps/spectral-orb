@@ -1,0 +1,19 @@
+description: >
+  Use Spectral scan orb to detect hardcoded credentials, secrets, API tokens and misconfiguration.
+  Do not forget to add SPECTRAL_DSN as environment variable in the project settings or organization context and SPECTRAL_ENV e.g https://get.spectralops.io
+usage:
+  version: 2.1
+  orbs:
+    spectral: spectralops/spectral@1.0.0
+  jobs:
+    build:
+      docker:
+        - image: circleci/node:latest
+      steps:
+        - checkout
+        - spectral/scan
+  workflows:
+    test-env-vars:
+      jobs:
+        - build:
+            context: credentials
