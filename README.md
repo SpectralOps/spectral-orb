@@ -7,7 +7,7 @@
     <h1>Spectral Orb</h1> 
 </p>
 
-[![CircleCI Build Status](https://circleci.com/gh/SpectralOps/spectral.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/SpectralOps/spectral)
+[![CircleCI](https://circleci.com/gh/SpectralOps/spectral-orb/tree/main.svg?style=svg)](https://circleci.com/gh/SpectralOps/spectral-orb/tree/main)
 [![CircleCI Orb Version](https://img.shields.io/badge/version-1.0.0-brightgreen)](https://circleci.com/orbs/registry/orb/spectralops/spectral)
 [![GitHub License](https://img.shields.io/badge/license-MIT-brightgreen)](https://raw.githubusercontent.com/SpectralOps/spectral/master/LICENSE)
 
