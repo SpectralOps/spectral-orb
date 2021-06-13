@@ -48,6 +48,3 @@ We welcome [issues](https://github.com/SpectralOps/spectral-orb/issues) to and [
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for further details.
-
-
-
