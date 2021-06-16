@@ -7,7 +7,7 @@ usage:
     spectral: spectralops/spectral@1.0.0
   jobs:
       - checkout
-      - spectral/scan
+      # - spectral/scan
   workflows:
     test-env-vars:
       jobs:
