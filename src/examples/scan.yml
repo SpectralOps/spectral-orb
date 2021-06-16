@@ -6,10 +6,14 @@ usage:
   orbs:
     spectral: spectralops/spectral@1.0.0
   jobs:
-      - checkout
-      # - spectral/scan
+    build:
+      docker:
+        - image: cimg/node:lts
+      steps:
+        - checkout
+        - spectral/scan
   workflows:
     test-env-vars:
       jobs:
-        - spectral/scan:
+        - build:
             context: credentials
