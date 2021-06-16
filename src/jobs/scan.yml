@@ -1,0 +1,19 @@
+description: >
+  Insert this job in-line with your standard CircleCI to run spectral scan on your code.
+
+executor: default
+
+parameters:
+  spectral_dsn_variable_name:
+    type: env_var_name
+    default: SPECTRAL_DSN
+    description: "env name of Spectral dsn stored"
+  spectral_environment_variable_name:
+    type: env_var_name
+    default: SPECTRAL_ENV
+    description: "env name of Spectral env stored"
+steps:
+  - setup:
+      spectral_dsn_variable_name: <<parameters.spectral_dsn_variable_name>>
+      spectral_environment_variable_name: <<parameters.spectral_environment_variable_name>>
+  - scan

@@ -25,7 +25,7 @@ To connect your Spectral account on [spectralops.io](https://spectralops.io) you
   jobs:
     build:
       docker:
-        - image: circleci/node:latest
+        - image: cimg/base:stable
       steps:
         - checkout
         - spectral/scan

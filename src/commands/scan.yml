@@ -1,18 +1,6 @@
 description: >
-  Scan command download and run Spectral scan
-parameters:
-  spectral_dsn_variable_name:
-    type: env_var_name
-    default: SPECTRAL_DSN
-    description: "env name of Spectral dsn stored"
-  spectral_environment_variable_name:
-    type: env_var_name
-    default: SPECTRAL_ENV
-    description: "env name of Spectral env stored"
+  Scan command run Spectral scan
 steps:
-  - preflight/setup
   - run:
       name: Spectral scan
-      command: |
-        curl -L "$SPECTRAL_ENV/latest/x/sh?dsn=$SPECTRAL_DSN" | preflight run https://sigs.spectralops.io/spectral
-        $HOME/.spectral/spectral scan --ok
+      command: $HOME/.spectral/spectral scan --ok

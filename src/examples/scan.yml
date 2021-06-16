@@ -6,14 +6,10 @@ usage:
   orbs:
     spectral: spectralops/spectral@1.0.0
   jobs:
-    build:
-      docker:
-        - image: circleci/node:latest
-      steps:
-        - checkout
-        - spectral/scan
+      - checkout
+      - spectral/scan
   workflows:
     test-env-vars:
       jobs:
-        - build:
+        - spectral/scan:
             context: credentials
