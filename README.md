@@ -8,7 +8,7 @@
 </p>
 
 [![CircleCI](https://circleci.com/gh/SpectralOps/spectral-orb/tree/main.svg?style=svg)](https://circleci.com/gh/SpectralOps/spectral-orb/tree/main)
-[![CircleCI Orb Version](https://img.shields.io/badge/version-1.0.0-brightgreen)](https://circleci.com/orbs/registry/orb/spectralops/spectral)
+[![CircleCI Orb Version](https://img.shields.io/badge/version-2.0.0-brightgreen)](https://circleci.com/orbs/registry/orb/spectralops/spectral)
 [![GitHub License](https://img.shields.io/badge/license-MIT-brightgreen)](https://raw.githubusercontent.com/SpectralOps/spectral/master/LICENSE)
 
 The Spectral CircleCI Orb can be used with any linux based docker image that includes the command line tools curl.
@@ -21,7 +21,7 @@ To connect your Spectral account on [spectralops.io](https://spectralops.io) you
 ```yaml
   version: 2.1
   orbs:
-    spectral: spectralops/spectral@1.0.0
+    spectral: spectralops/spectral@2.0.0
   jobs:
     build:
       docker:
