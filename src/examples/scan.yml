@@ -4,11 +4,11 @@ description: >
 usage:
   version: 2.1
   orbs:
-    spectral: spectralops/spectral@1.0.0
+    spectral: spectralops/spectral@2.0.0
   jobs:
     build:
       docker:
-        - image: circleci/node:latest
+        - image: cimg/node:lts
       steps:
         - checkout
         - spectral/scan

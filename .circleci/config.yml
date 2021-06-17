@@ -23,6 +23,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - spectral/setup
       - spectral/scan
 
 workflows:
@@ -45,6 +46,7 @@ workflows:
   integration-test_deploy:
     when: << pipeline.parameters.run-integration-tests >>
     jobs:
+      - spectral/scan
       - integration-test
       - orb-tools/dev-promote-prod-from-commit-subject:
           orb-name: spectralops/spectral
@@ -53,6 +55,7 @@ workflows:
           fail-if-semver-not-indicated: true
           publish-version-tag: false
           requires:
+            - spectral/scan
             - integration-test
           filters:
             branches:
