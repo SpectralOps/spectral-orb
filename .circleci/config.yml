@@ -46,17 +46,17 @@ workflows:
   integration-test_deploy:
     when: << pipeline.parameters.run-integration-tests >>
     jobs:
-      - spectral/scan
-      - integration-test
+      # - spectral/scan
+      # - integration-test
       - orb-tools/dev-promote-prod-from-commit-subject:
           orb-name: spectralops/spectral
           context: orb-publishing
           add-pr-comment: false
           fail-if-semver-not-indicated: true
           publish-version-tag: false
-          requires:
-            - spectral/scan
-            - integration-test
+          # requires:
+          #   - spectral/scan
+          #   - integration-test
           filters:
             branches:
               only:
