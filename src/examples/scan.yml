@@ -4,7 +4,7 @@ description: >
 usage:
   version: 2.1
   orbs:
-    spectral: spectralops/spectral@2.0.0
+    spectral: spectralops/spectral@2.0.1
   jobs:
     build:
       docker:
