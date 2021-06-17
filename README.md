@@ -21,7 +21,7 @@ To connect your Spectral account on [spectralops.io](https://spectralops.io) you
 ```yaml
   version: 2.1
   orbs:
-    spectral: spectralops/spectral@1.0.0
+    spectral: spectralops/spectral@2.0.0
   jobs:
     build:
       docker:
