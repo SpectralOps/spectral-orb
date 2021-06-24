@@ -24,7 +24,8 @@ jobs:
     steps:
       - checkout
       - spectral/setup
-      - spectral/scan
+      - spectral/scan:
+          flags: --ok
 
 workflows:
   test-pack:
@@ -46,7 +47,8 @@ workflows:
   integration-test_deploy:
     when: << pipeline.parameters.run-integration-tests >>
     jobs:
-      - spectral/scan
+      - spectral/scan:
+          flags: --ok
       - integration-test
       - orb-tools/dev-promote-prod-from-commit-subject:
           orb-name: spectralops/spectral
