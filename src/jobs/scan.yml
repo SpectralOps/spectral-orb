@@ -12,8 +12,13 @@ parameters:
     type: env_var_name
     default: SPECTRAL_ENV
     description: "env name of Spectral env stored"
+  flags:
+    type: string
+    default: ""
+    description: "Spectral flags to scan with"
 steps:
   - setup:
       spectral_dsn_variable_name: <<parameters.spectral_dsn_variable_name>>
       spectral_environment_variable_name: <<parameters.spectral_environment_variable_name>>
-  - scan
+  - scan:
+      flags: <<parameters.flags>>

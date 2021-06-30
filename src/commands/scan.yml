@@ -1,6 +1,11 @@
 description: >
   Scan command run Spectral scan
+parameters:
+  flags:
+    type: string
+    default: ""
+    description: "Spectral flags to scan with"
 steps:
   - run:
       name: Spectral scan
-      command: $HOME/.spectral/spectral scan --ok
+      command: SPECTRAL_INTEG=orb $HOME/.spectral/spectral scan <<parameters.flags>>
